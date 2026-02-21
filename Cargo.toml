@@ -1,0 +1,7 @@
+[workspace]
+members = [
+    "agent",
+    "controller",
+    "common",
+]
+resolver = "2"

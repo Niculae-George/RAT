@@ -1,0 +1,42 @@
+# --- Rust Specific ---
+/target
+# Exclude compiled binaries if you use a custom build directory
+*.exe
+*.dll
+*.so
+*.dylib
+
+# --- JetBrains (RustRover) ---
+.idea/
+*.iml
+# Occasionally shared settings you MIGHT want to keep (uncomment if needed)
+# !.idea/vcs.xml
+# !.idea/inspectionProfiles/
+
+# --- macOS Specific ---
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+
+# --- Windows Specific ---
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.pdb
+*.obj
+*.log
+
+# --- Cybersecurity / Secrets (CRITICAL) ---
+.env
+.env.*
+*.pem
+*.key
+*.pfx
+*.cert
+secrets/
+# Ignore your XOR keys or Gist IDs if stored in a separate file
+config_local.toml
