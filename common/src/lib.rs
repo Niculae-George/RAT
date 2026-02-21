@@ -1,14 +1,12 @@
-pub fn add(left: u64, right: u64) -> u64 {
-    left + right
-}
+use serde::{Serialize, Deserialize};
 
-#[cfg(test)]
-mod tests {
-    use super::*;
-
-    #[test]
-    fn it_works() {
-        let result = add(2, 2);
-        assert_eq!(result, 4);
-    }
+#[derive(Serialize, Deserialize, Debug)]
+pub enum SentinelPacket {
+    Handshake {
+        hostname: String,
+        version: String
+    },
+    Success(String),
+    Error(String),
+    Command(String),
 }
