@@ -5,3 +5,11 @@ members = [
     "common",
 ]
 resolver = "2"
+
+# ── Release profile: small, stripped binary for the agent ───────────────────
+[profile.release]
+opt-level = "z"      # optimise for size
+lto = true           # link-time optimisation
+codegen-units = 1
+strip = true         # strip symbols
+panic = "abort"
